@@ -1,0 +1,1213 @@
+@-moz-document domain("jenkins-dev.hypers.cc")
+{
+  html,
+body, table, form, input, td, th, p, textarea, select
+  {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  body
+  {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  body, table, form, td, th, p
+  {
+    color: hsla(0, 0%, 100%, .8);
+  }
+
+  #page-body
+  {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #36393e;
+  }
+
+  #main-panel
+  {
+    flex: 1;
+    margin-left: 0 !important;
+  }
+
+  a,
+a:link,
+a:hover,
+a:visited
+  {
+    color: #00b0f4;
+    text-decoration: none;
+    outline: none;
+  }
+
+  a:hover
+  {
+    text-decoration: underline;
+  }
+
+  .yui-button button
+  {
+    align-items: center;
+    background: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 16px;
+    padding: 2px 16px;
+    position: relative;
+  }
+
+  .yui-button button,
+.yui-button button:hover,
+.yui-button button:active
+  {
+    user-select: none !important;
+    cursor: pointer !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  #jenkins .yui-button.primary button
+  {
+    transition: background-color .17s ease;
+    background-color: #7289da;
+    color: #fff;
+  }
+
+  #jenkins .yui-button.primary button:hover
+  {
+    background-color: #677bc4;
+  }
+
+  #jenkins .yui-button.primary button:active
+  {
+    background-color: #5b6eae;
+  }
+
+  .icon-rss,
+img[alt=Feed]
+  {
+    border-radius: 4px;
+  }
+}
+
+@-moz-document domain("jenkins-dev.hypers.cc")
+{
+/* 面包屑改标签页 */
+
+  #breadcrumbBar,
+.top-sticker-inner
+  {
+    background: #202225;
+    border: none;
+    color: hsla(0, 0%, 100%, .3);
+  }
+
+  #breadcrumbBar > div.top-sticker
+  {
+    top: 40px;
+  }
+
+  #breadcrumbBar #breadcrumbs
+  {
+    border-bottom: none;
+  }
+
+  #breadcrumbs > li.children
+  {
+    display: none;
+  }
+
+  #menuSelector
+  {
+    display: none;
+  }
+
+  #breadcrumbs > li:hover
+  {
+    background-color: #202225 !important;
+  }
+
+  #breadcrumbs a.breadcrumbBarAnchor.inside
+  {
+    padding-right: .75em;
+  }
+
+  #breadcrumbs a.breadcrumbBarAnchor.mouseIsOverMenuSelector
+  {
+    background: none;
+  }
+
+  #breadcrumbs > li > a:hover
+  {
+    color: #f6f6f7 !important;
+  }
+
+  #breadcrumbs > li:not(:nth-last-child(2))
+  {
+    border-left: 1px solid rgba(0, 0, 0, .3);
+  }
+
+  #breadcrumbs > li:nth-last-child(2),
+#breadcrumbs > li:nth-last-child(2):hover
+  {
+    background-color: #36393e !important;
+  }
+
+  #breadcrumbs > li:nth-last-child(2) > a,
+#breadcrumbs > li:nth-last-child(2) > a:link
+  {
+    color: #f6f6f7 !important;
+  }
+
+  .yuimenu .bd
+  {
+    background: #282b30 !important;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .82), 0 1px 4px rgba(0, 0, 0, .1) !important;
+    border: none !important;
+  }
+
+  .yuimenuitem
+  {
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 2px 0;
+    overflow: hidden;
+    padding: 6px 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .yuimenuitem.yuimenuitem-selected
+  {
+    background: #25282d !important;
+    color: #fff !important;
+  }
+
+  .yuimenuitemlabel
+  {
+    color: hsla(0, 0%, 100%, .6) !important;
+  }
+}
+
+@-moz-document domain("jenkins-dev.hypers.cc")
+{
+/* 表格 */
+
+  .pane-frame
+  {
+    border-color: rgba(32, 34, 37, .3);
+  }
+
+  .pane-frame:hover,
+.pane-frame.mouseover
+  {
+    border-color: rgba(32, 34, 37, .3);
+  }
+
+  .pane-frame .pane tr:not(.header)
+  {
+    background: transparent !important;
+  }
+
+  .pane-frame table.stripped tr.header:hover,
+.pane-frame table.stripped-even tr.header:hover,
+.pane-frame table.stripped-odd tr.header:hover
+  {
+    background: rgba(32, 34, 37, .3) !important;
+  }
+
+  .pane-frame table.stripped tr:not(.header):hover,
+.pane-frame table.stripped-even tr:not(.header):hover,
+.pane-frame table.stripped-odd tr:not(.header):hover
+  {
+    background: rgba(79, 84, 92, .6) !important;
+  }
+
+  .bigtable th
+  {
+    background: rgba(32, 34, 37, .3);
+    color: #fff;
+    padding: 15px 8px 15px 15px;
+    border: none;
+  }
+
+  table.sortable a.sortheader,
+table.sortable span.sortarrow
+  {
+    color: #fff;
+  }
+
+  .tabBarFrame .tabBar
+  {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #4f545c;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 600;
+    height: 36px;
+    margin: 20px 1px 0;
+    padding-left: 8px;
+  }
+
+  .tabBar .tab:first-child
+  {
+    margin-left: 0;
+  }
+
+  .tabBar .tab a
+  {
+    color: hsla(0, 0%, 100%,.8) !important;
+    background: none !important;
+    border: none !important;
+    font-size: 16px;
+  }
+
+  .tabBar [type=radio]:checked ~ a
+  {
+    cursor: default;
+  }
+
+  .tabBar .tab a.addTab
+  {
+    visibility: hidden;
+  }
+
+  .tabBar:hover .tab a.addTab
+  {
+    visibility: visible;
+  }
+
+  .pane-frame table.pane tr.header
+  {
+    background: #35383c;
+  }
+
+  table.bigtable th,
+table.bigtable td
+  {
+    border: 1px solid #282b30;
+    padding: 8px;
+  }
+
+  table.bigtable tr:not(.header) td
+  {
+    color: hsla(0,0%,100%,.5);
+  }
+
+  #projectstatus th
+  {
+    padding: 8px;
+  }
+}
+
+@-moz-document domain("jenkins-dev.hypers.cc")
+{
+  #side-panel
+  {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-right: 1px solid #2f3136;
+    padding: 0 15px 0 15px;
+    margin: 15px 0 40px 0;
+    overflow-y: auto;
+  }
+
+  #side-panel::-webkit-scrollbar
+  {
+    width: 4px;
+    display: none;
+  }
+
+  #side-panel:hover::-webkit-scrollbar
+  {
+    display: block;
+  }
+
+  #side-panel::-webkit-scrollbar-thumb
+  {
+    background-clip: padding-box;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .3);
+  }
+
+  #tasks > .task
+  {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #tasks > .task:hover
+  {
+    background-color: rgba(79, 84, 92, .6);
+  }
+
+  #tasks > .task > a
+  {
+    display: block;
+  }
+
+  #tasks > .task > .task-icon-link
+  {
+    padding: 8px 0 8px 8px;
+  }
+
+  #tasks > .task > .task-link
+  {
+    flex: 1;
+    padding: 8px 8px 8px 0;
+    color: #f6f6f7;
+    opacity: .3;
+    font-weight: 400;
+  }
+
+  #tasks > .task > .task-link:hover
+  {
+    text-decoration: none;
+  }
+
+  #tasks > .task:hover > .task-link
+  {
+    opacity: 1;
+  }
+
+  #buildHistoryPage
+  {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  #buildHistoryPageNav
+  {
+    right: auto;
+    top: auto;
+    left: 15px;
+    bottom: 12px;
+    border: none;
+    display: flex;
+    z-index: 2;
+  }
+
+  #buildHistoryPageNav .nav
+  {
+    transform: rotate(-90deg);
+  }
+
+  #buildHistory
+  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #buildHistory .pane-content
+  {
+    flex: 1;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  #side-panel .pane-frame
+  {
+    border-color: rgba(32, 34, 37, .3);
+  }
+
+  #side-panel .pane-frame:hover,
+#side-panel .pane-frame.mouseover
+  {
+    border-color: rgba(32, 34, 37, .3);
+  }
+
+  #side-panel .pane-frame .pane-header,
+#side-panel .pane-frame .pane-footer
+  {
+    background: rgba(32, 34, 37, .3);
+    color: #fff;
+    padding: 15px 8px 15px 15px;
+    border: none;
+  }
+
+  #side-panel .pane-frame .pane-header .collapse
+  {
+    display: none;
+  }
+
+  #side-panel .pane-frame .pane .build-search-row:hover,
+#side-panel .pane-frame .pane .build-search-row tr:hover
+  {
+    background: none !important;
+  }
+
+  #side-panel .pane-frame .pane .build-search-row table tr
+  {
+    box-shadow: none;
+  }
+
+  #side-panel .pane-frame .pane .build-search-row table td
+  {
+    -ms-flex: 1;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: horizontal;
+    background: rgba(0,0,0,.2);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2px;
+    position: relative;
+  }
+
+  #side-panel .pane-frame .pane .build-search-row .clear
+  {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d3d3d3;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 !important;
+  }
+
+  #side-panel .pane-frame .pane .build-search-row .clear:hover
+  {
+    opacity: 1;
+  }
+
+  #side-panel .pane-frame .pane .build-search-row input
+  {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-box-sizing: border-box;
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+    flex: 1;
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    height: 26px;
+    min-width: 50px!important;
+    outline: none;
+    padding: 5px 7px;
+    resize: none;
+  }
+
+  #side-panel .pane-frame .pane .build-row
+  {
+    box-shadow: inset 0 -1px 0 0 #4f545c;
+  }
+
+  #side-panel .pane-frame .pane .build-row:last-child
+  {
+    display: none;
+  }
+
+  #side-panel .pane-frame .pane .build-row-cell
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 8px 15px 15px;
+  }
+
+  #side-panel .pane-frame .pane .build-row-cell > div
+  {
+    display: block;
+    width: auto;
+  }
+
+  #side-panel .pane-frame .pane .build-row-cell > .build-name
+  {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #side-panel .pane-frame .pane .build-row-cell .build-icon
+  {
+    position: static;
+    margin-right: 1em;
+  }
+
+  #side-panel .pane-frame .pane .build-row-cell .build-link
+  {
+    line-height: 20px;
+    color: #f6f6f7;
+    margin-left: 0;
+  }
+
+  #buildQueue,
+#executors
+  {
+    width: 100%;
+  }
+}
+
+@-moz-document domain("jenkins-dev.hypers.cc")
+{
+  #main-panel
+  {
+    background-color: #36393e;
+    color: #fff;
+    overflow-y: auto;
+  }
+
+  #main-panel::-webkit-scrollbar
+  {
+    width: 15px;
+  }
+
+  #main-panel::-webkit-scrollbar-thumb,
+#main-panel::-webkit-scrollbar-track
+  {
+    background-clip: padding-box;
+    border-radius: 7.5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #36393e;
+  }
+
+  #main-panel::-webkit-scrollbar-thumb
+  {
+    background-color: rgba(0, 0, 0, .3);
+  }
+
+  #main-panel::-webkit-scrollbar-track
+  {
+    background-color: rgba(0, 0, 0, .1);
+  }
+}
+
+@-moz-document domain("jenkins-dev.hypers.cc")
+{
+  footer
+  {
+    background: #202225;
+    border: none;
+    color: hsla(0, 0%, 100%, .3);
+  }
+}
+
+@-moz-document regexp("^https?://jenkins-dev\\.hypers\\.cc/job/.+/job/[^/]+/$")
+{
+/* 应用于“立即构建”按钮 */
+
+  #tasks > .task:nth-child(5)
+  {
+    background-color: #7289da;
+    transition: background-color .17s ease;
+    border-radius: 4px;
+  }
+
+  #tasks > .task:nth-child(5) > .task-link
+  {
+    color: #fff;
+    opacity: 1;
+  }
+
+  #tasks > .task:nth-child(5):hover
+  {
+    background-color: #677bc4;
+  }
+
+  #tasks > .task:nth-child(5):active
+  {
+    background-color: #5b6eae;
+  }
+}
+
+@-moz-document regexp("^https?://jenkins-dev\\.hypers\\.cc/job/.+/job/[^/]+/configure$")
+{
+/** 配置页 */
+  #main-panel
+  {
+    padding: 0;
+    display: flex;
+  }
+
+  #main-panel > .container
+  {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  #main-panel > .container > .row
+  {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+/** like main body */
+  #main-panel > .container > .row > div
+  {
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1366px;
+    float: none;
+  }
+
+/** like sidebar */
+  .jenkins-config-widgets
+  {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border: none;
+    background: transparent;
+    border-right: 1px solid #2f3136;
+    padding: 0 15px 0 15px;
+    margin: 15px 0 40px 0;
+    width: 218px;
+  }
+
+  .form-config
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .jenkins-config-widgets .form-config.tabBarFrame
+  {
+    border: none;
+  }
+
+  .jenkins-config-widgets .form-config.tabBarFrame .config-section-activators
+  {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background: transparent;
+  }
+/** like .task */
+  .jenkins-config-widgets .form-config.tabBarFrame .tabBar .tab
+  {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    margin: 0 0 2px 0;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  .jenkins-config-widgets .form-config.tabBarFrame .tabBar .tab.active
+  {
+    background-color: #7289da;
+    color: #fff;
+    border: none;
+  }
+
+  .jenkins-config-widgets .form-config.tabBarFrame .tabBar .tab:not(.active):hover
+  {
+    background-color: hsla(216,4%,74%,.1);
+    color: #f6f6f7;
+  }
+
+/** like main-panel */
+  #jenkins form.jenkins-config
+  {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 15px 115px 40px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  #jenkins form.jenkins-config::-webkit-scrollbar
+  {
+    width: 15px;
+  }
+
+  #jenkins form.jenkins-config::-webkit-scrollbar-thumb,
+#jenkins form.jenkins-config::-webkit-scrollbar-track
+  {
+    background-clip: padding-box;
+    border-radius: 7.5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #36393e;
+  }
+
+  #jenkins form.jenkins-config::-webkit-scrollbar-thumb
+  {
+    background-color: rgba(0, 0, 0, .3);
+  }
+
+  #jenkins form.jenkins-config::-webkit-scrollbar-track
+  {
+    background-color: rgba(0, 0, 0, .1);
+  }
+/** form */
+  .setting-name
+  {
+    font-weight: bold;
+    color: #b9bbbe;
+    letter-spacing: .5px;
+  }
+
+  #jenkins form.jenkins-config input,
+#jenkins form.jenkins-config textarea,
+#jenkins form.jenkins-config select,
+#jenkins .jenkins-config table td select
+  {
+    background-color: rgba(0, 0, 0, .1);
+    border-color: rgba(0, 0, 0, .3);
+    box-shadow: none;
+    color: #f6f6f7;
+    outline: none;
+    transition: background-color .15s ease,border .15s ease;
+    resize: none;
+  }
+
+  #jenkins .jenkins-config table td .yui-button button, 
+#jenkins .jenkins-config table td input[type='email'].setting-input, 
+#jenkins .jenkins-config table td input[type='password'].setting-input, 
+#jenkins .jenkins-config table td input[type='text'].setting-input,
+#jenkins form.jenkins-config textarea
+  {
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #jenkins form.jenkins-config input:hover,
+#jenkins form.jenkins-config textarea:hover
+  {
+    border-color: #040405;
+  }
+
+  #jenkins form.jenkins-config input:focus,
+#jenkins form.jenkins-config textarea:focus
+  {
+    border-color: #7289da;
+  }
+
+  #jenkins form.jenkins-config textarea
+  {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  #jenkins form.jenkins-config textarea + .textarea-handle
+  {
+    background-color: rgba(0, 0, 0, .3);
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: background-color .15s ease,border .15s ease;
+  }
+
+  #jenkins form.jenkins-config textarea:hover + .textarea-handle
+  {
+    border-color: #040405;
+  }
+
+  #jenkins form.jenkins-config textarea:focus + .textarea-handle
+  {
+    border-color: #7289da;
+  }
+
+  #jenkins form.jenkins-config tbody
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #jenkins form.jenkins-config tbody > tr
+  {
+    display: flex;
+  }
+
+  #jenkins .jenkins-config table tr td.setting-leftspace
+  {
+    height: 0;
+    padding: 0;
+  }
+
+  #jenkins .jenkins-config table tr td + td.setting-help,
+#jenkins .jenkins-config table tr td + td.setting-no-help
+  {
+    display: none;
+  }
+/** general rows */
+  .config-table-top-row.config_general
+  {
+    flex-direction: column;
+  }
+
+/** checkbox rows */
+  #jenkins .jenkins-config table .hetero-list-container,
+#jenkins .jenkins-config table .repeated-container,
+#jenkins .jenkins-config table tr.optional-block-start,
+#jenkins .jenkins-config table tr.radio-block-start
+  {
+    border: none;
+  }
+
+/**#jenkins .jenkins-config table tr.optional-block-start ~ tr:not(.optional-block-end):not(.optional-block-start)[nameref^="rowSetStart"],*/
+  #jenkins .jenkins-config table .repeated-chunk,
+#jenkins .jenkins-config table tr[nameref^="rowSetStart"]:not(.optional-block-start):not(.optional-block-end), 
+#jenkins .jenkins-config table tr[nameref^="cb"], 
+#jenkins .jenkins-config table tr[nameref^="radio-block"]
+  {
+    border-left: 1px solid #7289da;
+    border-right: 1px solid #7289da;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-end
+  {
+    margin-bottom: 8px;
+  }
+
+  #jenkins .jenkins-config table tr:not([style*="display: none;"]) + .optional-block-end
+  {
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+    border-bottom: 1px solid #7289da;
+    border-left: 1px solid #7289da;
+    border-right: 1px solid #7289da;
+  }
+/** no panel */
+  #jenkins .jenkins-config table tr.rowvg-start + .optional-block-end
+  {
+    background-color: #7289da;
+  }
+/** panel first line */
+  #jenkins .jenkins-config table tr.rowvg-start + tr:not(.optional-block-end)
+  {
+    border-top: 3px solid #7289da;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td
+  {
+    flex: 1;
+    padding: 0;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input[type="checkbox"]
+  {
+    display: none;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input + label
+  {
+    display: flex;
+    margin: 0;
+    border-radius: 3px;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input + label:hover
+  {
+    border-color: #040405;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input:checked + label
+  {
+    border-color: rgb(114, 137, 218);
+    background-color: rgb(114, 137, 218);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 7px;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input + label::before
+  {
+    content: '✓';
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    border: 1px solid #72767d;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    margin-right: 8px;
+    color: transparent;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input + label:hover::before
+  {
+    color: #72767d;
+  }
+
+  #jenkins .jenkins-config table tr.optional-block-start > td > input:checked + label::before
+  {
+    background: #fff;
+    border-color: #fff;
+    color: #7289da;
+    font-size: 1.2em;
+  }
+
+  #jenkins .jenkins-config table .bottom-sticker-inner
+  {
+    position: fixed;
+    right: 0;
+    top: 66px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@-moz-document regexp("^https?://jenkins-dev\\.hypers\\.cc/job/.+/job/[^/]+/\\d+/console$")
+{
+/** 控制台输出页 */
+
+  #main-panel
+  {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .console-output
+  {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: black;
+    color: green;
+    padding: 1em;
+  }
+
+  .console-output::-webkit-scrollbar
+  {
+    width: 15px;
+  }
+
+  .console-output::-webkit-scrollbar-thumb,
+.console-output::-webkit-scrollbar-track
+  {
+    background-clip: padding-box;
+    border-radius: 7.5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+  }
+
+  .console-output::-webkit-scrollbar-thumb
+  {
+    background-color: rgba(255, 255, 255, .3);
+  }
+
+  .console-output::-webkit-scrollbar-track
+  {
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  .console-output + #spinner
+  {
+    background-color: black;
+    padding: 0 1em 1em;
+  }
+}
+
+@-moz-document url-prefix("https://jenkins-dev.hypers.cc/login")
+{
+/* 登录页 */
+
+  body
+  {
+    background-image: url(https://discordapp.com/assets/36511f92dae3fc67ab0d6c2a8e5e677f.jpg);
+    background-size: cover;
+  }
+
+  #header .login,
+#header .searchbox,
+#breadcrumbBar
+  {
+    display: none;
+  }
+
+  #header
+  {
+    z-index: 1;
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -232px;
+    padding: 30px 30px 0;
+    height: 70px;
+    background: none;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+  }
+
+  #header .logo
+  {
+    margin-left: 0;
+  }
+
+  #side-panel
+  {
+    display: none;
+  }
+
+  #page-body,
+#main-panel,
+footer
+  {
+    background: none;
+    color: #fff;
+  }
+
+  #main-panel
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #main-panel > div
+  {
+    display: flex;
+    margin: 0;
+    position: relative;
+  }
+
+  #main-panel > div::after
+  {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    filter: blur(10px);
+    background-image: url(https://discordapp.com/assets/36511f92dae3fc67ab0d6c2a8e5e677f.jpg);
+    background-size: cover;
+    background-position: 50%;
+    z-index: -1;
+  }
+
+  #main-panel form
+  {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background: rgba(40, 43, 48, .75);
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
+  }
+
+  #main-panel form table
+  {
+    flex: 1;
+    margin-top: 70px;
+    width: 100%;
+  }
+
+  #main-panel form tr
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-panel form tr:not(:first-child)
+  {
+    margin-top: 18px;
+  }
+
+  #main-panel form tr:last-child
+  {
+    display: none;
+  }
+
+  #main-panel form tr > td
+  {
+    display: block;
+  }
+
+  #main-panel form tr > td:first-child
+  {
+    color: #87909c;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  #main-panel form input
+  {
+    line-height: 34px;
+    width: 100%;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    outline: none;
+    background: transparent;
+    color: #fff;
+    margin: 12px 0 1px;
+  }
+
+  #main-panel form input:focus
+  {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 0;
+  }
+
+  #jenkins .yui-button.primary
+  {
+    display: block;
+  }
+
+  #jenkins .yui-button.primary button
+  {
+    font-size: 16px;
+    line-height: 58px;
+    margin: 40px 0 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+}
